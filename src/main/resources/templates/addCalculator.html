@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition</title>
+</head>
+<body>
+<style>
+    body {
+        background-color: azure;
+    }
+
+    p {
+        color: black;
+    }
+</style>
+
+<main class="container-fluid">
+    <div class="row">
+        <br>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <h3>Addition operation</h3>
+            <p>The addition of two whole numbers results in the total amount or sum of those values combined.<br>
+                This observation is equivalent to the mathematical expression "3 + 2 = 5" (that is, "3 plus 2 is equal to 5").</p>
+            <form action="#" th:action="@{/index/addCalculator.html}" method="get">
+            </form>
+        </main>
+        <div class="allClassesContainer" style="left: 100px">
+            <span>Write 2 numbers below:</span>
+            <div class="form-group col-md-3">
+                <input type="number" class="form-control"
+                       placeholder="Enter a number">
+            </div>
+            <p>+</p>
+            <div class="form-group col-md-3">
+                <input type="number" class="form-control"
+                       placeholder="Enter a number">
+            </div>
+            <button autofocus>=</button>
+            <div class="form-group col-md-3">
+                <input type="number" class="form-control"
+                       th:value="#{result1}">
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

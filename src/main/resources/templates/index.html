@@ -1,17 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Pocket web computer</title>
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/pricing.css" rel="stylesheet">
+    <style>
+        .body {
+            background: white
+        }
+
+        .h2 {
+            background: lightskyblue;
+            color: black;
+            border-radius: 1em;
+            padding: 1em;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .h2 {
+            text-align: center;
+        }
+    </style>
+
+    <link href="/css/carousel.css" rel="stylesheet">
 </head>
 <body>
-Welcome to my first web app<br>
-you will have 3 links to other page<br>
-- <a href="/ageCalculator">age calculator</a><br>
-    one text box and one button to calculate<br>
-- modulo calculator (12/10 = 2)<br>
-    two text box and one button<br>
-- multiplier<br>
-    two text box and one button<br>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3">
+        <label>Hello, guys!</label>
+
+    </a>
+</header>
+<main>
+    <h2>Welcome to our pocket web computer</h2>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <style>{
+            text-align: center
+        ;
+            border: 3px solid #73AD21
+        ;
+            padding: 10px
+        ;
+        }
+        </style>
+        <div class="col-md-7">
+            <h2 class="featurette-heading" style="font-max-size: x-large">
+                <span class="text-muted">These are the mathematical operations you can chose</span>
+                <br>
+            </h2>
+            <div class="list-group">
+                <div class="form-group col-md-2">
+                    <label>These are the mathematical operations</label><br>
+                    <br>
+                    <button href="/addCalculator">Add 2 numbers</button>
+                    <br>
+                    <br>
+                    <button href="/subtractionCalculator">Subtract 2 numers</button>
+                    <br>
+                    <br>
+                    <button href="/multiplyCalculator">Multiply 2 numbers</button>
+                    <br>
+                    <br>
+                    <button href="/divisionCalculator">Calculate the division (quotient) of 2 numbers</button>
+                    <br>
+                    <br>
+                    <button href="/moduloCalculator">Calculate the modulo (remainder) of a division</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" style="text-align: right">
+            <br>
+            <img style="float: left;" src="/img/business-paperwork.jpg" width="150"
+                 height="150">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</main>
 </body>
+<footer style="scroll-margin-block: 100px" class="container">
+    <hr>
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <address>
+        Written by <a>Pocket Developers LTD</a>.<br>
+        Visit us at:<br>
+        <a href="http://www.expertissimo.ro/">Visit Pocket Developers!</a><br>
+        <a href="mailto:>@yahoo.com">Send email</a><br>
+        Our address is:<br>
+        Westborough 66, <br>
+        Zip code: YO111TS<br>
+        Scarborough <br>
+        Uk
+    </address>
+    <p>&copy; 2020-2021 Pocket Developers LTD</p>
+</footer>
 </html>
