@@ -30,19 +30,52 @@
         .h2 {
             text-align: center;
         }
+
+        .px-3 {
+        }
     </style>
 
     <link href="/css/carousel.css" rel="stylesheet">
 </head>
+<br>
 <body>
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3">
-        <label>Hello, guys!</label>
-
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="margin-left: 200px">
+    <style>
+        .header{
+            background-clip: padding-box;
+        }
+    </style>
+    <a>
+        <label style="text-align: center">Hello, guys!</label>
     </a>
 </header>
 <main>
-    <h2>Welcome to our pocket web computer</h2>
+    <style>
+        .main {
+            background: azure;
+        }
+
+        .h2 {
+            background: lightcyan;
+            color: black;
+            border-radius: 1em;
+            padding: 1em;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .h3 {
+            background: azure;
+            text-align: center;
+        }
+        .h4{
+            background: lightcyan;
+        }
+    </style>
+    <h2 style="margin-left: 50px; text-align: center">Welcome to our pocket web computer!</h2>
     <hr class="featurette-divider">
 
     <div class="row featurette">
@@ -56,51 +89,41 @@
         }
         </style>
         <div class="col-md-7">
-            <h2 class="featurette-heading" style="font-max-size: x-large">
-                <span class="text-muted">These are the mathematical operations you can chose</span>
+            <h3 class="featurette-heading; text-muted" style="font-max-size: x-large; margin-left: 25px; text-align: center">
+                <span>These are the mathematical operations you can chose</span>
                 <br>
-            </h2>
-            <div class="list-group">
-                <div class="form-group col-md-2">
-                    <label>These are the mathematical operations</label><br>
-                    <br>
-                    <button href="/addCalculator">Add 2 numbers</button>
-                    <br>
-                    <br>
-                    <button href="/subtractionCalculator">Subtract 2 numers</button>
-                    <br>
-                    <br>
-                    <button href="/multiplyCalculator">Multiply 2 numbers</button>
-                    <br>
-                    <br>
-                    <button href="/divisionCalculator">Calculate the division (quotient) of 2 numbers</button>
-                    <br>
-                    <br>
-                    <button href="/moduloCalculator">Calculate the modulo (remainder) of a division</button>
-                    <br>
-                    <br>
-                </div>
-            </div>
+            </h3>
+            <span th:if="${result != null}">Result : <p th:text="${result}"></p></span>
+            <form method="post" action="/add">
+                <input type="text" value="" name="inputOne">
+                <input type="text" value="" name="inputTwo">
+                <br>
+                <input type="submit" name="add" value="ADD">
+            </form>
+
+            <form method="post" action="/subtract">
+                <input type="text" value="" name="inputOne">
+                <input type="text" value="" name="inputTwo">
+                <br>
+                <input type="submit" name="subtract" value="SUBTRACT">
+            </form>
+
         </div>
-        <div class="col-md-5" style="text-align: right">
-            <br>
-            <img style="float: left;" src="/img/business-paperwork.jpg" width="150"
-                 height="150">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <div class="col-md-5" style="margin-left: 100px; text-align: center">
+            <img  src="/img/business-paperwork.jpg" width="150" height="150">
             <br>
         </div>
     </div>
 </main>
 </body>
-<footer style="scroll-margin-block: 100px" class="container">
+<footer style="scroll-margin-block: 100px; margin-left: 100px; text-emphasis: center" class="container">
+    <style>
+        .footer
+        {
+            background: azure;
+            text-align: center;
+        }
+    </style>
     <hr>
     <p class="float-end"><a href="#">Back to top</a></p>
     <address>

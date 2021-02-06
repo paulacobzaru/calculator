@@ -1,14 +1,27 @@
 package com.calculator.service;
 
-public interface Calculator {
+import org.springframework.stereotype.Service;
 
-    Integer add(int x, int y);
+@Service
+public class Calculator{
 
-    Integer minus(int x, int y);
+    public int add(int x, int y) {
+        return x+y;
+    }
 
-    Integer multiply(int x, int y);
+    public int minus(int x, int y) {
+        return x-y;
+    }
 
-    Integer division(int x, int y);
+    public int multiply(int x, int y) {
+        return x*y;
+    }
 
-    Integer modulo(int x, int y);
+    public int division(int x, int y) {
+        return x/y;
+    }
+
+    public int modulo(int x, int y) {
+        return x%y;
+    }
 }
