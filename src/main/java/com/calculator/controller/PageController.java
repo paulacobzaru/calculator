@@ -13,15 +13,41 @@ public class PageController {
 
     @PostMapping("/add")
     public String add(Model model, int inputOne, int inputTwo) {
-        int result =calculator.add(inputOne,inputTwo);
-        model.addAttribute("result", result);
-        return "index";
+        Calculator calculator = new Calculator();
+        int result1 =calculator.add(inputOne,inputTwo);
+        model.addAttribute("result", result1);
+        return "/index";
     }
 
     @PostMapping("/subtract")
     public String subtract(Model model, int inputOne, int inputTwo) {
-        int result =calculator.minus(inputOne,inputTwo);
-        model.addAttribute("result", result);
+        Calculator calculator = new Calculator();
+        int result2 =calculator.minus(inputOne,inputTwo);
+        model.addAttribute("result", result2);
+        return "index";
+    }
+
+    @PostMapping("/multiply")
+    public String multiply(Model model, int inputOne, int inputTwo) {
+        Calculator calculator = new Calculator();
+        int result3 =calculator.multiply(inputOne,inputTwo);
+        model.addAttribute("result", result3);
+        return "index";
+    }
+
+    @PostMapping("/division")
+    public String divisiont(Model model, int inputOne, int inputTwo) {
+        Calculator calculator = new Calculator();
+        int result4 =calculator.division(inputOne,inputTwo);
+        model.addAttribute("result", result4);
+        return "index";
+    }
+
+    @PostMapping("/modulo")
+    public String modulot(Model model, int inputOne, int inputTwo) {
+        Calculator calculator = new Calculator();
+        int result5 =calculator.modulo(inputOne,inputTwo);
+        model.addAttribute("result", result5);
         return "index";
     }
 

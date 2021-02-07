@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,8 +41,12 @@
 <body>
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="margin-left: 200px">
     <style>
-        .header{
+        .header {
             background-clip: padding-box;
+            font-family: "Comic Sans MS";
+            font-max-size: larger;
+            box-shadow: azure;
+            solid-color: black;
         }
     </style>
     <a>
@@ -89,24 +93,74 @@
         }
         </style>
         <div class="col-md-7">
-            <h3 class="featurette-heading; text-muted" style="font-max-size: x-large; margin-left: 25px; text-align: center">
+            <h3 class="featurette-heading; text-muted"
+                style="font-max-size: x-large; margin-left: 25px; text-align: center">
                 <span>These are the mathematical operations you can chose</span>
                 <br>
             </h3>
-            <span th:if="${result != null}">Result : <p th:text="${result}"></p></span>
-            <form method="post" action="/add">
-                <input type="text" value="" name="inputOne">
-                <input type="text" value="" name="inputTwo">
+            <h4 class="ui-icon-volume-off; text-muted"
+                style="font-variant-emoji-size: medium; margin-left: 10px; text-align: left;>
                 <br>
-                <input type="submit" name="add" value="ADD">
-            </form>
+                <p> The main mathematical operations between 2 numbers: </p>
 
-            <form method="post" action="/subtract">
+                <form method = " post action="/add">
+                <p> Add 2 numbers: </p>
                 <input type="text" value="" name="inputOne">
+                <label onchange="AnimationTimeline"> + </label>
                 <input type="text" value="" name="inputTwo">
+                <input type="submit" name="Addition" value="ADD">
+                <label onchange="AnimationTimeline"> The result of the addition is = </label>
+                <form method="get" action="/add" th:object="${result1}" id="search"></form>
+                <span th:if="${result1 != null}"><label datatype="${result1}" th:text="${result1}"></label></span>
+                </form>
                 <br>
-                <input type="submit" name="subtract" value="SUBTRACT">
-            </form>
+
+                <form method="post" action="/subtract">
+                    <p> Substract 2 numbers: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> - </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Subtraction" value="SUBTRACT">
+                    <label onchange="AnimationTimeline"> The result of the substraction is = </label>
+                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                </form>
+                <br>
+
+                <form method="post" action="/multiply">
+                    <p> Multiply 2 numbers: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> * </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Multiply" value="MULTIPLY">
+                    <label onchange="AnimationTimeline"> The result of the multiplication is = </label>
+                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                </form>
+                <br>
+
+                <form class="form-group col-md-1" method="post" action="/division">
+                    <p> Divide 2 numbers: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> / </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Divide" value="DIVIDE">
+                    <label onchange="AnimationTimeline"> The result of the division is = </label>
+                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                </form>
+                <br>
+
+                <form class="form-group col-md-1" method="post" paction="/modulo">
+                    <p> Find the reminder of 2 numbers: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> % </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Modulo" value="MODULO">
+                    <label onchange="AnimationTimeline"> The result of the modulo is = </label>
+                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                </form>
+                <br>
+                <button type="button" value="Reset">Reset</button>
+
+            </h4>
 
         </div>
         <div class="col-md-5" style="margin-left: 100px; text-align: center">

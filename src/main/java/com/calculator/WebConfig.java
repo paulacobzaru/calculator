@@ -10,5 +10,4 @@ public class WebConfig implements WebMvcConfigurer {
     public void addViewController(ViewControllerRegistry registry) {
         registry.addViewController("/index").setViewName("index");
     }
-
 }
