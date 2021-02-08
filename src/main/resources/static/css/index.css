@@ -1,0 +1,29 @@
+.body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+.main {
+    background: azure;
+}
+
+.h2 {
+    background: lightcyan;
+    color: black;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.h3 {
+    background: azure;
+    text-align: center;
+}
+
+.h4 {
+    background: lightcyan;
+}

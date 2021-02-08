@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,7 @@
     <meta name="generator" content="Hugo 0.79.0">
     <title>Pocket web computer</title>
 
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/pricing.css" rel="stylesheet">
+
     <style>
         .body {
             background: white
@@ -35,23 +34,13 @@
         }
     </style>
 
-    <link href="/css/carousel.css" rel="stylesheet">
 </head>
-<br>
 <body>
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="margin-left: 200px">
-    <style>
-        .header {
-            background-clip: padding-box;
-            font-family: "Comic Sans MS";
-            font-max-size: larger;
-            box-shadow: azure;
-            solid-color: black;
-        }
-    </style>
-    <a>
-        <label style="text-align: center">Hello, guys!</label>
-    </a>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadowl" style="margin-left: 10px; background-clip: padding-box;
+            font-family: Comic Sans MS; font-max-size: larger; box-shadow: azure; solid-color: black;  backgroung-color: darkslateblue; box-shadow: 10px; font-max-size: larger; text-align: center">
+    <div class="b" style="border: 1px solid blue; background-color: lightblue; padding: 10px; text-align: center">HELLO,
+        WORLD!
+    </div>
 </header>
 <main>
     <style>
@@ -59,27 +48,21 @@
             background: azure;
         }
 
-        .h2 {
-            background: lightcyan;
-            color: black;
-            border-radius: 1em;
-            padding: 1em;
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
-        }
-
         .h3 {
             background: azure;
             text-align: center;
         }
-        .h4{
+
+        .h4 {
             background: lightcyan;
         }
     </style>
-    <h2 style="margin-left: 50px; text-align: center">Welcome to our pocket web computer!</h2>
+    <h2 class="ui-icon-background" style="background-color:darkturquoise; margin-left: 10px; text-align: center">
+        <br>
+        Welcome to our pocket web computer!
+        <br>
+        <br>
+    </h2>
     <hr class="featurette-divider">
 
     <div class="row featurette">
@@ -92,92 +75,113 @@
         ;
         }
         </style>
-        <div class="col-md-7">
-            <h3 class="featurette-heading; text-muted"
-                style="font-max-size: x-large; margin-left: 25px; text-align: center">
-                <span>These are the mathematical operations you can chose</span>
+        <div class="col-md-12">
+            <h3 class="ui-icon-volume-off; text-muted"
+                style="background-color: lightblue; font-variant-emoji: medium; margin-left: 10px; text-align: center">
                 <br>
-            </h3>
-            <h4 class="ui-icon-volume-off; text-muted"
-                style="font-variant-emoji-size: medium; margin-left: 10px; text-align: left;>
+                <p><em> The main mathematical operations between 2 numbers are the following: </em></p>
                 <br>
-                <p> The main mathematical operations between 2 numbers: </p>
 
-                <form method = " post action="/add">
-                <p> Add 2 numbers: </p>
-                <input type="text" value="" name="inputOne">
-                <label onchange="AnimationTimeline"> + </label>
-                <input type="text" value="" name="inputTwo">
-                <input type="submit" name="Addition" value="ADD">
-                <label onchange="AnimationTimeline"> The result of the addition is = </label>
-                <form method="get" action="/add" th:object="${result1}" id="search"></form>
-                <span th:if="${result1 != null}"><label datatype="${result1}" th:text="${result1}"></label></span>
+                <form style="background-color: lightgreen;" method="post" action="/add">
+                    <br>
+                    <p> Add 2 numbers: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> + </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Addition" value="ADD">
+                    <label onchange="AnimationTimeline"> The result of the addition is = </label>
+                    <span th:if="${result1 != null}"><label datatype="${result1}" th:text="${result1}"></label></span>
                 </form>
-                <br>
 
-                <form method="post" action="/subtract">
+                <form style="background-color:lightblue;" method="post"
+                      action="/subtract">
+                    <br>
                     <p> Substract 2 numbers: </p>
                     <input type="text" value="" name="inputOne">
                     <label onchange="AnimationTimeline"> - </label>
                     <input type="text" value="" name="inputTwo">
                     <input type="submit" name="Subtraction" value="SUBTRACT">
                     <label onchange="AnimationTimeline"> The result of the substraction is = </label>
-                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
-                </form>
-                <br>
+                    <span th:if="${result2 != null}"><label datatype="${result2}"
+                                                            th:text="${result2}"></label></span>
 
-                <form method="post" action="/multiply">
+                </form>
+
+                <form style="background-color:khaki;" method="post" action="/multiply">
+                    <br>
                     <p> Multiply 2 numbers: </p>
                     <input type="text" value="" name="inputOne">
                     <label onchange="AnimationTimeline"> * </label>
                     <input type="text" value="" name="inputTwo">
                     <input type="submit" name="Multiply" value="MULTIPLY">
                     <label onchange="AnimationTimeline"> The result of the multiplication is = </label>
-                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                    <span th:if="${result3 != null}"><label datatype="${result3}" th:text="${result3}"></label></span>
                 </form>
-                <br>
 
-                <form class="form-group col-md-1" method="post" action="/division">
+                <form style="background-color:pink;" class="form-group col-md-1" method="post" action="/division">
+                    <br>
                     <p> Divide 2 numbers: </p>
                     <input type="text" value="" name="inputOne">
                     <label onchange="AnimationTimeline"> / </label>
                     <input type="text" value="" name="inputTwo">
                     <input type="submit" name="Divide" value="DIVIDE">
                     <label onchange="AnimationTimeline"> The result of the division is = </label>
-                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                    <span th:if="${result4 != null}"><label datatype="${result4}" th:text="${result4}"></label></span>
                 </form>
-                <br>
 
-                <form class="form-group col-md-1" method="post" paction="/modulo">
+                <form style="background-color:lightgrey;" class="form-group col-md-1" method="post" action="/modulo">
+                    <br>
                     <p> Find the reminder of 2 numbers: </p>
                     <input type="text" value="" name="inputOne">
                     <label onchange="AnimationTimeline"> % </label>
                     <input type="text" value="" name="inputTwo">
                     <input type="submit" name="Modulo" value="MODULO">
                     <label onchange="AnimationTimeline"> The result of the modulo is = </label>
-                    <span th:if="${result != null}"><label datatype="${result}" th:text="${result}"></label></span>
+                    <span th:if="${result5 != null}"><label datatype="${result5}"
+                                                            th:text="${result5}"></label></span>
                 </form>
-                <br>
-                <button type="button" value="Reset">Reset</button>
 
-            </h4>
+                <form style="background-color:lightgreen;" class="form-group col-md-1" method="post" action="/power">
+                    <br>
+                    <p> Find x to the power y: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> x^y </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Power" value="POWER">
+                    <label onchange="AnimationTimeline"> The result of x (the base) to the power y (the exponent) is
+                        = </label>
+                    <span th:if="${result6 != null}"><label datatype="${result6}"
+                                                            th:text="${result6}"></label></span>
+                </form>
 
-        </div>
-        <div class="col-md-5" style="margin-left: 100px; text-align: center">
-            <img  src="/img/business-paperwork.jpg" width="150" height="150">
-            <br>
+                <form style="background-color:aquamarine;" class="form-group col-md-1" method="post" action="/root">
+                    <br>
+                    <p> The y'th root of a number x: </p>
+                    <input type="text" value="" name="inputOne">
+                    <label onchange="AnimationTimeline"> y√x </label>
+                    <input type="text" value="" name="inputTwo">
+                    <input type="submit" name="Root" value="ROOT">
+                    <label onchange="AnimationTimeline"> The result of y'th root of a number x is the x (the base)
+                        to the power 1/y (the exponent) = </label>
+                    <span th:if="${result7 != null}"><label datatype="${result7}"
+                                                            th:text="${result7}"></label></span>
+                </form>
+
+                <div style="background-color:darkturquoise;" class="col-md-5; margin-left: 20px; text-align: center">
+                    <br>
+                    <br>
+                    <img src="/img/business-paperwork.jpg" width="150" height="150">
+                    <br>
+                    <p style="text-align: center"><em><i> Thank you for your time!
+                        <br>Spend even more for your mathematical operations! </i></em></p>
+                    <br>
+                </div>
+            </h3>
         </div>
     </div>
 </main>
 </body>
-<footer style="scroll-margin-block: 100px; margin-left: 100px; text-emphasis: center" class="container">
-    <style>
-        .footer
-        {
-            background: azure;
-            text-align: center;
-        }
-    </style>
+<footer class="container" style="background-blend-mode: inherit; background-color: aquamarine; margin-left: 10px">
     <hr>
     <p class="float-end"><a href="#">Back to top</a></p>
     <address>
